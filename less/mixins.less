@@ -1,1 +1,17 @@
 // Mixins in here
+
+@tablet: (max-width:500px);
+
+.flexDisplay(@direction, @wrap, @justify, @align) {
+    display: flex;
+    flex-flow: @direction;
+    flex-wrap: @wrap;
+    justify-content: @justify;
+    align-content: @align;
+}
+
+.navStyle(@color, @fSize, @txt-deco) {
+    color: @color;
+    font-size: @fSize;
+    text-decoration: @txt-deco;
+  }
