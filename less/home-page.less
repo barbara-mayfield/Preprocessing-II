@@ -81,6 +81,12 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+    margin: 0px;
+    width: 100%;
+    margin-bottom: 36px;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -92,14 +98,30 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      .flexDisplay(column, wrap, space-between, center);
+      width: 100%;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+    @media @mobile {
+      width: 73%;
     }
+  }
 
     .btn {
       .buttonStyle(teal, 74%, 40px, 1.2rem, @white);
       padding-left: 30px;
+    
+    @media @mobile {
+      padding-left: 122px;
+      background-color: @eastern-blue;
+      width: 100%;
+    }
+    
     }
   }
 }// home
