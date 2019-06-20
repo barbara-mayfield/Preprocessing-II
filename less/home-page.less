@@ -5,18 +5,16 @@
     margin: 20px 0;
     padding: 20px 0;
     .flexDisplay(row, nowrap, space-between, center);
-  
+
     @media @mobile {
-      flex-direction: column;
+      .flexDisplay(row, wrap, center, center);
       align-items: center;
     }
   }
 
   .content-section {
     margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    .flexDisplay(row, wrap, space-between);
 
    .welcome-text {
     padding-bottom: 20px;
@@ -36,6 +34,11 @@
 
       img {
         border-radius: 10px;
+      }
+
+      @media @mobile {
+        display:flex;
+        flex-flow: column wrap;
       }
     }
   }
