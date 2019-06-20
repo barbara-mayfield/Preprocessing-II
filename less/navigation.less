@@ -1,1 +1,26 @@
 // Navigation Styles here
+
+header {
+    border-bottom: 1px dashed black;
+    margin: 20px 0;
+    padding: 20px 0;
+    .flexDisplay(row, nowrap, space-between, center);
+  
+    @media @tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    nav {
+  
+      @media @tablet {
+        margin-left: 0;
+      }
+  
+      a {
+        .navStyle(black, 1.5rem, none);
+        padding: 20px;
+      }
+
+    }
+  }
