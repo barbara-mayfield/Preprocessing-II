@@ -5,21 +5,36 @@
     margin: 20px 20px 0px 20px 20px;
     padding: 20px 0;
     .flexDisplay(row, nowrap, space-between, center);
-  }
 
-  .content-section {
-    margin: 30px 0;
-    .flexDisplay(row, wrap, space-between);
+    @media @mobile {
 
-   .welcome-text {
-    padding-bottom: 20px;
-    border-bottom: 2px dashed @navigation-border;
-  }
+          .flexDisplay(row, wrap, center, center);
+          padding-bottom: 10px;
+          height: 100px;
+        }
+      }
+      
+      .content-section {
+        margin: 30px 0;
+        .flexDisplay(row, wrap, space-between, stretch);
+        
+        @media @mobile {
+          .flexDisplay(column, wrap, center, center);
+      }
+        
+    .welcome-text {
+      padding-bottom: 20px;
+      border-bottom: 2px dashed @navigation-border;
+    }
     
     .text-content {
       .marginTop(24px);
       width: 48%;
       padding-right: 1%;
+
+    @media @mobile {
+      width: 100%;
+    }
     }
 
     .img-content {
@@ -30,12 +45,26 @@
       img {
         border-radius: 10px;
       }
+
+    @media @mobile {
+      width: 100%;
+
+      img {
+        border-radius: 8px;
+        width: 100%;
+      }
     }
-  }
+    }
+
+}
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      .flexDisplay(column-reverse, wrap, center, center);
+  }
 
     .text-content {
       padding-left: 1%;

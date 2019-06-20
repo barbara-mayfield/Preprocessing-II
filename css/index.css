@@ -1,3 +1,13 @@
+@media (max-width:500px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 0px;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -168,11 +178,6 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-@media (max-width:500px) {
-  nav {
-    margin-left: 0;
-  }
-}
 nav a {
   color: black;
   font-size: 1.5rem;
@@ -192,7 +197,7 @@ nav a {
 }
 .home header {
   border-bottom: 2px dashed #C0C0C0;
-  margin: 20px 0;
+  margin: 20px 20px 0px 20px 20px;
   padding: 20px 0;
   display: flex;
   flex-direction: row;
@@ -207,14 +212,26 @@ nav a {
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    align-items: center;
+    padding-bottom: 10px;
+    height: 100px;
   }
 }
 .home .content-section {
   margin: 30px 0;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: stretch;
+}
+@media (max-width:500px) {
+  .home .content-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
 }
 .home .content-section .welcome-text {
   padding-bottom: 20px;
@@ -225,6 +242,11 @@ nav a {
   width: 48%;
   padding-right: 1%;
 }
+@media (max-width:500px) {
+  .home .content-section .text-content {
+    width: 100%;
+  }
+}
 .home .content-section .img-content {
   margin-top: 24px;
   width: 48%;
@@ -233,9 +255,27 @@ nav a {
 .home .content-section .img-content img {
   border-radius: 10px;
 }
+@media (max-width:500px) {
+  .home .content-section .img-content {
+    width: 100%;
+  }
+  .home .content-section .img-content img {
+    border-radius: 8px;
+    width: 100%;
+  }
+}
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width:500px) {
+  .home .inverse-content {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
