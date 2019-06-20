@@ -2,14 +2,9 @@
 
   header {
     border-bottom: 2px dashed @navigation-border;
-    margin: 20px 0;
+    margin: 20px 20px 0px 20px 20px;
     padding: 20px 0;
     .flexDisplay(row, nowrap, space-between, center);
-
-    @media @mobile {
-      .flexDisplay(row, wrap, center, center);
-      align-items: center;
-    }
   }
 
   .content-section {
@@ -34,11 +29,6 @@
 
       img {
         border-radius: 10px;
-      }
-
-      @media @mobile {
-        display:flex;
-        flex-flow: column wrap;
       }
     }
   }
