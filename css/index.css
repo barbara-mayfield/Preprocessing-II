@@ -1,3 +1,31 @@
+@keyframes bgcolorTransition {
+  0% {
+    background-color: #000;
+  }
+  25% {
+    background-color: #17A2B8;
+  }
+  50% {
+    background-color: #FFEBCD;
+  }
+  100% {
+    background-color: #212529;
+  }
+}
+@keyframes txtcolorTransition {
+  0% {
+    color: #000;
+  }
+  25% {
+    color: #17A2B8;
+  }
+  50% {
+    color: #FFEBCD;
+  }
+  100% {
+    color: #212529;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -172,6 +200,12 @@ nav a {
   color: black;
   font-size: 1.5rem;
   text-decoration: none;
+  -webkit-animation-name: txtcolorTransition;
+  -webkit-animation-duration: 4s;
+  animation-name: txtcolorTransition;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  border-radius: 30px;
   padding: 20px;
 }
 .footer {
@@ -323,6 +357,11 @@ nav a {
   height: 40px;
   border-radius: 1.2rem;
   color: #FFFFFF;
+  -webkit-animation-name: bgcolorTransition;
+  -webkit-animation-duration: 4s;
+  animation-name: bgcolorTransition;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
   padding-left: 30px;
 }
 @media (max-width:500px) {

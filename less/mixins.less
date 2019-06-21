@@ -12,6 +12,12 @@
     color: @color;
     font-size: @fSize;
     text-decoration: @txt-deco;
+    -webkit-animation-name: txtcolorTransition;
+    -webkit-animation-duration: 4s;
+    animation-name: txtcolorTransition;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    border-radius: 30px;
   }
 
 .marginTop(@mtop) {
@@ -27,4 +33,23 @@
     height: @height;
     border-radius: @border-radius;
     color: @color;
+    -webkit-animation-name: bgcolorTransition;
+    -webkit-animation-duration: 4s;
+    animation-name: bgcolorTransition;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes bgcolorTransition {
+    0%   {background-color: #000;}
+    25%  {background-color: @eastern-blue;}
+    50%  {background-color: @sandy-beach;}
+    100% {background-color: @shark;}
+  }
+
+  @keyframes txtcolorTransition {
+    0%   {color: #000;}
+    25%  {color: @eastern-blue;}
+    50%  {color: @sandy-beach;}
+    100% {color: @shark;}
   }
