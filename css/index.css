@@ -208,6 +208,15 @@ nav a {
   border-radius: 30px;
   padding: 20px;
 }
+@media (max-width:500px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+  }
+}
 .footer {
   width: 100%;
   border-top: 2px dashed silver;
@@ -236,8 +245,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    padding-bottom: 10px;
-    height: 100px;
+    padding: 12px;
   }
 }
 .home .content-section {
