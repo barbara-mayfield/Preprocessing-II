@@ -1,18 +1,19 @@
+header {
+  border-bottom: 2px dashed @navigation-border;
+  padding: 20px 266px 20px 266px;
+  .flexDisplay(row, nowrap, space-between, center);
+  width: 100%;
+
+  @media @mobile {
+
+        .flexDisplay(row, wrap, center, center);
+        padding-bottom: 10px;
+        height: 100px;
+      }
+    }
+
 .home {
 
-  header {
-    border-bottom: 2px dashed @navigation-border;
-    margin: 20px 20px 0px 20px 20px;
-    padding: 20px 0;
-    .flexDisplay(row, nowrap, space-between, center);
-
-    @media @mobile {
-
-          .flexDisplay(row, wrap, center, center);
-          padding-bottom: 10px;
-          height: 100px;
-        }
-      }
       
       .content-section {
         margin: 30px 0;

@@ -219,18 +219,18 @@ nav a {
   font-size: 1.6rem;
   padding: 20px;
 }
-.home header {
+header {
   border-bottom: 2px dashed #C0C0C0;
-  margin: 20px 20px 0px 20px 20px;
-  padding: 20px 0;
+  padding: 20px 266px 20px 266px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-content: center;
+  width: 100%;
 }
 @media (max-width:500px) {
-  .home header {
+  header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
