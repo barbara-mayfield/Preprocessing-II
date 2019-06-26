@@ -1,1 +1,55 @@
 // Mixins in here
+
+.flexDisplay(@direction, @wrap, @justify, @align) {
+    display: flex;
+    flex-direction: @direction;
+    flex-wrap: @wrap;
+    justify-content: @justify;
+    align-content: @align;
+}
+
+.navStyle(@color, @fSize, @txt-deco) {
+    color: @color;
+    font-size: @fSize;
+    text-decoration: @txt-deco;
+    -webkit-animation-name: txtcolorTransition;
+    -webkit-animation-duration: 4s;
+    animation-name: txtcolorTransition;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    border-radius: 30px;
+  }
+
+.marginTop(@mtop) {
+    margin-top: @mtop;
+}
+
+.buttonStyle(@bg-color, @width, @height, @border-radius, @color) {
+    display: block;
+    background-color: @bg-color;
+    padding: 10px;
+    font-size: 2rem;
+    width: @width;
+    height: @height;
+    border-radius: @border-radius;
+    color: @color;
+    -webkit-animation-name: bgcolorTransition;
+    -webkit-animation-duration: 4s;
+    animation-name: bgcolorTransition;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes bgcolorTransition {
+    0%   {background-color: #000;}
+    25%  {background-color: @eastern-blue;}
+    50%  {background-color: @sandy-beach;}
+    100% {background-color: @shark;}
+  }
+
+  @keyframes txtcolorTransition {
+    0%   {color: #000;}
+    25%  {color: @eastern-blue;}
+    50%  {color: @sandy-beach;}
+    100% {color: @shark;}
+  }

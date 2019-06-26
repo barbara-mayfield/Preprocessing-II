@@ -1,31 +1,70 @@
+header {
+  border-bottom: 2px dashed @navigation-border;
+  padding: 20px 266px 20px 266px;
+  .flexDisplay(row, nowrap, space-between, center);
+  width: 100%;
+
+  @media @mobile {
+
+        .flexDisplay(row, wrap, center, center);
+        padding: 12px;
+      }
+    }
+
 .home {
 
-  .content-section {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-   
+      
+      .content-section {
+        margin: 30px 0;
+        .flexDisplay(row, wrap, space-between, stretch);
+        
+        @media @mobile {
+          .flexDisplay(column, wrap, center, center);
+      }
+        
+    .welcome-text {
+      padding-bottom: 20px;
+      border-bottom: 2px dashed @navigation-border;
+    }
     
     .text-content {
+      .marginTop(24px);
       width: 48%;
       padding-right: 1%;
+
+    @media @mobile {
+      width: 100%;
+    }
     }
 
     .img-content {
+      .marginTop(24px);
       width: 48%;
       padding-left: 1%;
 
       img {
         border-radius: 10px;
       }
+
+    @media @mobile {
+      width: 100%;
+
+      img {
+        border-radius: 8px;
+        width: 100%;
+      }
     }
-  }
+    }
+
+}
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      .flexDisplay(column-reverse, wrap, center, center);
+  }
 
     .text-content {
       padding-left: 1%;
@@ -42,6 +81,12 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+    margin: 0px;
+    width: 100%;
+    margin-bottom: 36px;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -53,9 +98,30 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      .flexDisplay(column, wrap, space-between, center);
+      width: 100%;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+    @media @mobile {
+      width: 73%;
+    }
+  }
+
+    .btn {
+      .buttonStyle(teal, 74%, 40px, 1.2rem, @white);
+      padding-left: 30px;
+    
+    @media @mobile {
+      padding-left: 122px;
+      background-color: @eastern-blue;
+      width: 100%;
+    }
+    
     }
   }
 }// home
